@@ -1,33 +1,34 @@
-:root {
-    --color-primary:#000000;
-    --big-dark:#161616;
-    --cad-bg: #181818;
-    --text-color: #fff;
+/* VARIAIVEIS GLOBAIS - PALHETA DE CORES */
+:root{
+    --color-primary:#722ed1;
+    --bg-dark:#141414;
+    --card-bg: #1f1f1f;
+    --text-color:#fff;
     --btn-color:#00ff88;
 }
 *{
-    margin: 0;
+    margin:0;
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    background: var(--big-dark);
-    color:var(--t)
+body{
+    background: var(--bg-dark);
+    color:var(--text-color);
 }
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    background: #141414;
+    background: rgba(0,0,0,0.8);
+    top:0;
 }
 .logo{
     font-size: 1.5rem;
     font-weight: bold;
 }
 .logo span{
-    color: var(--btn-color)
-
+    color:var(--btn-color)
 }
 nav ul{
     display: flex;
@@ -35,10 +36,63 @@ nav ul{
 }
 nav ul li{
     margin: 0 15px;
-    text-decoration:none;
-    transition: 0.35;
+}
+nav ul li a{
+    color:var(--text-color);
+    text-decoration: none;
+    transition: 0.3s;
 }
 nav ul li a:hover{
-     color: var(--btn-color)
+    color:var(--btn-color)
+}
+.container{
+    padding: 40px 15%;
+}
+.card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+    margin-top: 20px;
+}
+.game-card{
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3 ease;
+     border: 1px solid var(--text-color);
+}
+.game-card:hover{
+    transform: translateY(-10px);
+    border-color: yellow;
+}
 
+.game-card img{
+    width: 100%;
+    height: auto;
+}
+.card-content{
+    padding: 15px;
+    text-align: center;
+}
+.preco{
+    color:var(--btn-color);
+    font-size: 1.4rem;
+    margin: 10px 0;
+    font-weight: 700;
+}
+.btn-comprar{
+    background: var(--btn-color);
+    color:var(--card-bg);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: zoom-in;
+    width: 70%;
+    font-weight: 700;
+    transition: 0.3s;
+}
+.btn-comprar:hover{
+    background: var(--color-primary);
+    color:var(--text-color);
+    transform: scale(1.2);
 }
