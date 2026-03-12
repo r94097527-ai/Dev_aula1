@@ -1,0 +1,44 @@
+:root {
+    --color-primary:#000000;
+    --big-dark:#161616;
+    --cad-bg: #181818;
+    --text-color: #fff;
+    --btn-color:#00ff88;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: var(--big-dark);
+    color:var(--t)
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: #141414;
+}
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.logo span{
+    color: var(--btn-color)
+
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin: 0 15px;
+    text-decoration:none;
+    transition: 0.35;
+}
+nav ul li a:hover{
+     color: var(--btn-color)
+
+}
